@@ -38,7 +38,7 @@ public class MainActivityFragment extends Fragment implements BookBaseAdapter.On
 
     @Override
     public void onLongClick(int position) {
-        Toast.makeText(getContext(),"onLongClick事件       您点击了第："+position+"个Item",0).show();
+        Toast.makeText(getContext(),"onLongClick事件       您点击了的第："+position+"个Item",0).show();
     }
 
     @Override
