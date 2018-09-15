@@ -4,6 +4,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.annotation.test.ActionListenerInstaller;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
@@ -23,14 +26,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         textView = findViewById(R.id.test);
-        button =findViewById(R.id.button);
-        //ActionListenerInstaller.processAnnotations(this);
+        button =(Button) findViewById(R.id.button);
+        ActionListenerInstaller.processAnnotations(this);
 
     }
-//    @ActionListener(source = "test_btn")
-//    public void onBtnClick() {
-//        android.util.Log.d("czh","CLICK 事件发生了");
-//    }
+    @ActionListener(source = "button")
+    public void onBtnClick() {
+        Toast.makeText(this.getApplicationContext(),"CLICK 事件发生了",Toast.LENGTH_SHORT);
+        android.util.Log.d("czh","CLICK 事件发生了");
+        textView.setText("CLICK 事件发生了");
+    }
 
     @Override
     protected void onStart() {
