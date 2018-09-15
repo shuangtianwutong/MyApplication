@@ -64,7 +64,7 @@ public class MainActivityFragment extends Fragment implements BookBaseAdapter.On
         mLayoutManager = new LinearLayoutManager(getContext());
         //mLayoutManager .setOrientation(LinearLayoutManager.HORIZONTAL);
         mRecyclerView.setLayoutManager(mLayoutManager);
-        mRecyclerView.addItemDecoration( new DividerGridItemDecoration(this ));
+        //mRecyclerView.addItemDecoration( new DividerGridItemDecoration(this ));
 //设置增加或删除条目的动画
         mRecyclerView.setItemAnimator( new DefaultItemAnimator());
         mBookBaseAdapter= new BookBaseAdapter(mlsit);
