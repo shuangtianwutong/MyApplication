@@ -1,4 +1,4 @@
-package com.reflection.test;
+package com.annotation.test;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

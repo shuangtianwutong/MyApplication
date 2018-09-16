@@ -2,8 +2,6 @@ package com.annotation.test;
 
 import android.view.View;
 
-import com.reflection.test.ActionListener;
-
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
