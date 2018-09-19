@@ -1,6 +1,7 @@
 package com.h5test.main;
 
 import android.app.AlertDialog;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -9,16 +10,19 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.webkit.JavascriptInterface;
 import android.webkit.JsResult;
+import android.webkit.ValueCallback;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private WebView webView;
     private ProgressBar progressBar;
+    Button btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,11 +39,17 @@ public class MainActivity extends AppCompatActivity {
 //        webView.loadDataWithBaseURL(null,"<html><head><title> 欢迎您 </title></head>" +
 //                "<body><h2>使用webview显示 html代码</h2></body></html>", "text/html" , "utf-8", null);
 
+        /**
+         * 添加javascriptInterface
+         * 第一个参数：这里需要一个与js映射的java对象
+         * 第二个参数：该java对象被映射为js对象后在js里面的对象名，在js中要调用该对象的方法就是通过这个来调用
+         */
         webView.addJavascriptInterface(this,"android");//添加js监听 这样html就能调用客户端
         webView.setWebChromeClient(webChromeClient);
         webView.setWebViewClient(webViewClient);
 
         WebSettings webSettings=webView.getSettings();
+        //启用javascript
         webSettings.setJavaScriptEnabled(true);//允许使用js
 
         /**
@@ -56,6 +66,27 @@ public class MainActivity extends AppCompatActivity {
 
         //不显示webview缩放按钮
 //        webSettings.setDisplayZoomControls(false);
+
+        btn = (Button)findViewById(R.id.btn);
+
+        btn.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                //调用H5无参无返回值方法
+               // webView.loadUrl("javascript:show()");
+                //调用H5有参方法
+               // webView.loadUrl("javascript:alertMsg('哈哈')");
+                String content = "9880";
+                //webView.loadUrl("javascript:alertMsg(\""+content+"\")");
+                webView.loadUrl("javascript:getMsg()");
+                //调用H5有返回值方法
+                webView.evaluateJavascript("sum(1,2)",new ValueCallback() {
+                    @Override
+                    public void onReceiveValue(Object value) {
+                        Toast.makeText(MainActivity.this,"js返回结果为="+value,Toast.LENGTH_LONG).show();
+                    }
+                });
+            }
+        });
     }
 
     //WebViewClient主要帮助WebView处理各种通知、请求事件
@@ -114,6 +145,20 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
+
+        @JavascriptInterface//一定要写，不然h5调不到这个方法
+        public String back() {
+            return "hello world";
+        }
+
+
+
+
+    public void  onButton1Click(View view) {
+        Log.i("ansen","onButton1Click(");
+            startActivity(new Intent(this.getApplicationContext(),JsBridgeTestActivity.class));
+
+    }
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         Log.i("ansen","是否有上一个页面:"+webView.canGoBack());
@@ -125,9 +170,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * JS调用android的方法
-     * @param str
-     * @return
+     * JS调用android的方法@param str
+     *  /**
+     * 注意这里的@JavascriptInterface注解， target是4.2以上都需要添加这个注解，否则无法调用
+     * @param text
      */
     @JavascriptInterface //仍然必不可少
     public void  getClient(String str){

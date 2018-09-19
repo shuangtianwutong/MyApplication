@@ -13,6 +13,7 @@
 <div id="wrap">
     <div id="header"><h1>Webview简单使用</h1>
     </div>
+    <div id="temp">h5页面</div>
     <div id="main">
         <dl>
             <dd><a href="http://www.baidu.com">点击跳转到百度</a></dd>
@@ -31,6 +32,26 @@ function callBackClient(){
     alert("Js alert");//弹窗
     javascript:android.getClient("传一个字符串给客户端");//调用客户端
 }
+
+ //无参无返回值的方法
+    function show(){
+        document.getElementById("temp").innerHTML = "Hello world";
+    }
+
+    //有返回值的方法
+    function sum(i,j){
+        return i+j;
+    }
+
+    //有参无返回值的方法
+    function alertMsg(message){
+        alert(message);
+    }
+
+     function getMsg(){
+        var result=window.android.back();
+          document.getElementById("temp").innerHTML=result;
+    }
 </script>
 </div>
 </html>
