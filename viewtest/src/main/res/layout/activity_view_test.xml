@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android= "http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width= "fill_parent"
+android:layout_height= "fill_parent"
+android:gravity= "center_horizontal"
+android:orientation= "vertical" >
+
+<LinearLayout
+    android:layout_width= "match_parent"
+    android:layout_height= "wrap_content" >
+
+    <Button
+        android:layout_width= "0dp"
+        android:layout_height= "wrap_content"
+        android:layout_weight= "1"
+        android:onClick= "scrollLeft"
+        android:text= " 左移 " />
+
+    <Button
+        android:layout_width= "0dp"
+        android:layout_height= "wrap_content"
+        android:layout_weight= "1"
+        android:onClick= "scrollRight"
+        android:text= " 右移 " />
+
+    <Button
+        android:layout_width= "0dp"
+        android:layout_height= "wrap_content"
+        android:layout_weight= "1"
+        android:onClick= "scrollUp"
+        android:text= " 上移 " />
+
+    <Button
+        android:layout_width= "0dp"
+        android:layout_height= "wrap_content"
+        android:layout_weight= "1"
+        android:onClick= "scrollDown"
+        android:text= " 下移 " />
+</LinearLayout >
+
+<LinearLayout
+    android:layout_width= "match_parent"
+    android:layout_height= "wrap_content" >
+
+    <Button
+        android:layout_width= "0dp"
+        android:layout_weight= "1"
+        android:layout_height= "wrap_content"
+        android:onClick= "reset1"
+        android:text= " 瞬间复位 " />
+
+    <Button
+        android:layout_width= "0dp"
+        android:layout_weight= "1"
+        android:layout_height= "wrap_content"
+        android:onClick= "reset2"
+        android:text= " 平滑复位 " />
+</LinearLayout >
+    <com.java.widget.DepartureView
+        android:background= "#ff0000"
+        android:id="@+id/departure_center"
+        android:layout_width= "300dp"
+        android:layout_height= "300dp" />
+
+</LinearLayout>
