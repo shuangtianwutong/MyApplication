@@ -1,5 +1,6 @@
 package com.study.jsontest;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -22,6 +23,13 @@ public class JsonStudyActivity extends AppCompatActivity {
         textView =findViewById(R.id.text);
         testJson();
     }
+
+      public void testSerializable(Intent intent)   {
+         TestBean bean = (TestBean)intent.getSerializableExtra("testBean");
+         Log.d("zrz2018","zrz2018--bean=="+bean);
+         //test girrypick---1
+      }
+
 
     public void testJson(){
         try {
