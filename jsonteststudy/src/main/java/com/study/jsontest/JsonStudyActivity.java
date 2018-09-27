@@ -30,11 +30,13 @@ public class JsonStudyActivity extends AppCompatActivity {
          Log.d("zrz2018","zrz2018");
         //testJson();
          testSerializable(getIntent());
+
     }
 
       public void testSerializable(Intent intent)   {
          TestBean bean = (TestBean)intent.getSerializableExtra("testBean");
          Log.d("zrz2018","zrz2018--bean=="+bean);
+         //test girrypick---1
       }
 
 
