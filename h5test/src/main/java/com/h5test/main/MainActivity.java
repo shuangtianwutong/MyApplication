@@ -173,7 +173,7 @@ public class MainActivity extends AppCompatActivity {
      * JS调用android的方法@param str
      *  /**
      * 注意这里的@JavascriptInterface注解， target是4.2以上都需要添加这个注解，否则无法调用
-     * @param text
+     * @param
      */
     @JavascriptInterface //仍然必不可少
     public void  getClient(String str){

@@ -40,6 +40,10 @@ public class Scheme1Activity extends AppCompatActivity {
             System.out.println("path1:" + path1);
             System.out.println("queryString:" + queryString);
         }
+        uri=uri.buildUpon().appendQueryParameter("test","testw").
+                appendQueryParameter("test1","").build();
+        System.out.println(" uri:" +  uri);
+        System.out.println(" uri2:" +  UriUtils.getInstance().getUri());
 
     }
 }
