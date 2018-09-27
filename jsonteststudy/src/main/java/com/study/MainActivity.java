@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
        intent.putExtra("testBean",testBean);
        startActivity(intent);
        //test gitcherry1
+        //test gitcherry2
 
     }
     /**
