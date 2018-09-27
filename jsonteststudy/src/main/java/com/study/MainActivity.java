@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //test分支修改
         //developer 分支修改后
     }
 
@@ -27,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     public void  onButtonClickJsonTest(View view) {
         Log.i("ansen","onButton1Click(");
         startActivity(new Intent(this.getApplicationContext(),JsonStudyActivity.class));
+        //test分支修改
 
     }
     /**
