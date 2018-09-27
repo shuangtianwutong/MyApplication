@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
        Intent intent =new Intent(this.getApplicationContext(),JsonStudyActivity.class);
        intent.putExtra("testBean",testBean);
        startActivity(intent);
+        //test merge1 master
 
     }
     /**
