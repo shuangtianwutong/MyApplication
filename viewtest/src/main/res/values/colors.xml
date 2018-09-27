@@ -3,4 +3,8 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="selfblue">#ff0000ff</color>
+    <color name="selfred">#ffff0000</color>
+    <color name="selfgreen">#ff00ff00</color>
 </resources>
