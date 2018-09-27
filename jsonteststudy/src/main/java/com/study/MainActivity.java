@@ -35,10 +35,6 @@ public class MainActivity extends AppCompatActivity {
        Intent intent =new Intent(this.getApplicationContext(),JsonStudyActivity.class);
        intent.putExtra("testBean",testBean);
        startActivity(intent);
-       //test gitcherry1
-        // test gitcherry2
-       //test gitcherry1
-        //test gitcherry2
 
     }
     /**
