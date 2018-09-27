@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         Log.i("ansen","onButton1Click(");
         startActivity(new Intent(this.getApplicationContext(),JsonStudyActivity.class));
         //test分支修改
+        //master分支修改首次
 
     }
     /**
