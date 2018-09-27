@@ -28,33 +28,22 @@ public class JsonStudyActivity extends AppCompatActivity {
         setContentView(R.layout.activity_json_main);
         textView =findViewById(R.id.text);
          Log.d("zrz2018","zrz2018");
-        //testJson();
-         testSerializable(getIntent());
+        testJson();
+         //testSerializable(getIntent());
 
     }
 
       public void testSerializable(Intent intent)   {
          TestBean bean = (TestBean)intent.getSerializableExtra("testBean");
          Log.d("zrz2018","zrz2018--bean=="+bean);
-<<<<<<< HEAD
          //test girrypick---1
-=======
->>>>>>> master
+
       }
 
 
-    public void testJson()   {
-<<<<<<< HEAD
-=======
-      public void testSerializable(Intent intent)   {
-         TestBean bean = (TestBean)intent.getSerializableExtra("testBean");
-         Log.d("zrz2018","zrz2018--bean=="+bean);
-         //test girrypick---1
-      }
 
 
     public void testJson(){
->>>>>>> master
         try {
             JSONObject  jsonobject2 = new  JSONObject(jsonText2);
             JSONObject extendValue = jsonobject2.getJSONObject("extendValue");
@@ -74,33 +63,28 @@ public class JsonStudyActivity extends AppCompatActivity {
                    Log.d("zrz2018","maxnu="+item1.getString("maxnum"));
             }
 
-<<<<<<< HEAD
+            int length = item1.length();
+
+
 
            ArrayList<String> keys = new ArrayList<String>();
             while (iterator.hasNext())
             {
                 String key = (String) iterator.next();
                 keys.add(key);
-                Log.d("zrz2018","-key-="+key);
-
-=======
-
-           ArrayList<String> keys = new ArrayList<String>();
-            while (iterator.hasNext())
-            {
-                String key = (String) iterator.next();
-                keys.add(key);
-                Log.d("zrz2018","-key-="+key);
-
->>>>>>> master
+                Log.d("zrz2018","iterator-"+key+" :=="+item1.getString(key));
             }
+
+
 
 
 
             //JSONArray parallelListArray = item.getJSONArray("parameters");
 
-            //Log.d("zrz2018","dispatchtyp--"+dispatchtype+"--utctime="+utctime+"--proid-="+proid);
-           /* for (int j = 0; j < parallelListArray.length(); j++) {
+            Log.d("zrz2018","dispatchtyp--"+dispatchtype+"--utctime="+utctime+"--proid-="+proid);
+            Log.d("zrz2018","dispatchtyp=1 ====-"+(Integer.parseInt(dispatchtype)==1));
+          /* for (int j = 0; j < parallelListArray.length(); j++) {
+          /* for (int j = 0; j < parallelListArray.length(); j++) {
                 JSONObject parallelItemObject = parallelListArray.getJSONObject(j);
                 Log.d("zrz2018","\nparallelItemObject["+j+"]=="+parallelItemObject);
                 JSONArray eventListArray = parallelItemObject.getJSONArray("report_list");
