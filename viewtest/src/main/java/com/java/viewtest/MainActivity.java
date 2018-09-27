@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //     //test developer1 test
     }
 
     public void  onButtonClickJsonTest(View view) {
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
     public void  onButtonClickSchemrTest(View view) {
 
         startActivity(new Intent(this.getApplicationContext(),ScrollerTestActivity.class));
+        //     //test developer1 test2
 
     }
 
