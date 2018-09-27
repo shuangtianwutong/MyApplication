@@ -35,9 +35,8 @@ public class MainActivity extends AppCompatActivity {
        Intent intent =new Intent(this.getApplicationContext(),JsonStudyActivity.class);
        intent.putExtra("testBean",testBean);
        startActivity(intent);
-        //test分支修改
-        //master分支修改首次
-        //test分支修改2
+       //test gitcherry1
+        //test gitcherry2
 
     }
     /**
