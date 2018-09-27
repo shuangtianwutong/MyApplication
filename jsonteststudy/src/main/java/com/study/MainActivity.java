@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
        startActivity(intent);
         //test merge1 master
        //test merge1 developer
+        //test merge2 master
 
     }
     /**
