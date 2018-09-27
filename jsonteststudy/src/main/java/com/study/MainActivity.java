@@ -10,6 +10,7 @@ import android.view.View;
 
 import com.study.jsontest.JsonStudyActivity;
 import com.study.jsontest.R;
+import com.study.jsontest.TestBean;
 import com.study.schemeurl.Scheme1Activity;
 
 import java.util.Scanner;
@@ -30,7 +31,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void  onButtonClickJsonTest(View view) {
         Log.i("ansen","onButton1Click(");
-        startActivity(new Intent(this.getApplicationContext(),JsonStudyActivity.class));
+        TestBean testBean =new TestBean("张荣召","男",25);
+       Intent intent =new Intent(this.getApplicationContext(),JsonStudyActivity.class);
+       intent.putExtra("testBean",testBean);
+       startActivity(intent);
         //test分支修改
         //master分支修改首次
         //test分支修改2
