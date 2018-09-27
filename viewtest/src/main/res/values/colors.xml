@@ -7,4 +7,31 @@
     <color name="selfblue">#ff0000ff</color>
     <color name="selfred">#ffff0000</color>
     <color name="selfgreen">#ff00ff00</color>
+    <color name="poi_select_fragment_view_bg">#FFFFFF</color>
+    <!--文字颜色-->
+    <color name="poi_address_text_gray">#666666</color>
+    <color name="poi_address_text_hint">#FF999999</color>
+    <color name="poi_address_text_normal">#FF333333</color>
+    <color name="poi_address_text_dark">#999999</color>
+    <color name="poi_address_text_light">#ffffff</color>
+    <color name="poi_address_report_text_color_blue">#FF5C6799</color>
+    <color name="poi_address_confirm_view_text_color">#FF666666</color>
+
+    <!--城市列表-->
+    <color name="poi_one_address_white">#ffffff</color>
+    <color name="poi_one_address_menu_item_pressed">#ebebeb</color>
+    <color name="poi_one_address_search_view_bg">#f5f5f5</color>
+
+
+    <color name="poi_address_line_bg">#10000000</color>
+
+    <color name="poi_address_header_view_item_bg">#ebebeb</color>
+    <!--地址输入框左侧HeaderView相关颜色-->
+    <color name="poi_address_green_dot_color">#33CCB0</color>
+    <color name="poi_address_orange_dot_color">#FF7D41</color>
+    <color name="poi_address_item_unfocus_bg">#FFF5F6F7</color>
+    <color name="poi_address_item_focus_bg">#FFE8E9EB</color>
+
+    <color name="confirm_button_start_bg_color">#FF8B47</color>
+    <color name="confirm_button_end_bg_color">#FF6D38</color>
 </resources>

@@ -1,1 +1,1 @@
-include ':app', ':reflectiontest', ':h5test', ':viewtest', ':jsonteststudy'
+include ':app', ':reflectiontest', ':h5test', ':viewtest', ':jsonteststudy', ':MedieaRecorder'
