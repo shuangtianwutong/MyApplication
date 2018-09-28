@@ -36,11 +36,25 @@ public class JsonStudyActivity extends AppCompatActivity {
       public void testSerializable(Intent intent)   {
          TestBean bean = (TestBean)intent.getSerializableExtra("testBean");
          Log.d("zrz2018","zrz2018--bean=="+bean);
+<<<<<<< HEAD
          //test girrypick---1
+=======
+>>>>>>> master
       }
 
 
     public void testJson()   {
+<<<<<<< HEAD
+=======
+      public void testSerializable(Intent intent)   {
+         TestBean bean = (TestBean)intent.getSerializableExtra("testBean");
+         Log.d("zrz2018","zrz2018--bean=="+bean);
+         //test girrypick---1
+      }
+
+
+    public void testJson(){
+>>>>>>> master
         try {
             JSONObject  jsonobject2 = new  JSONObject(jsonText2);
             JSONObject extendValue = jsonobject2.getJSONObject("extendValue");
@@ -60,6 +74,7 @@ public class JsonStudyActivity extends AppCompatActivity {
                    Log.d("zrz2018","maxnu="+item1.getString("maxnum"));
             }
 
+<<<<<<< HEAD
 
            ArrayList<String> keys = new ArrayList<String>();
             while (iterator.hasNext())
@@ -68,6 +83,16 @@ public class JsonStudyActivity extends AppCompatActivity {
                 keys.add(key);
                 Log.d("zrz2018","-key-="+key);
 
+=======
+
+           ArrayList<String> keys = new ArrayList<String>();
+            while (iterator.hasNext())
+            {
+                String key = (String) iterator.next();
+                keys.add(key);
+                Log.d("zrz2018","-key-="+key);
+
+>>>>>>> master
             }
 
 
