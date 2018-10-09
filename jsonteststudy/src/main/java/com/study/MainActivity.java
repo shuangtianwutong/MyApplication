@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
        intent.putExtra("testBean",testBean);
        startActivity(intent);
         //test merge1 master
+       //test merge1 developer
 
     }
     /**
