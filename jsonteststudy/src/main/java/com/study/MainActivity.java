@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         //test merge1 master
        //test merge1 developer
         //test merge2 developer
+        //test merge2 master
 
     }
     /**
