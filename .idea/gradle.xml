@@ -13,11 +13,13 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/h5test" />
             <option value="$PROJECT_DIR$/jsonteststudy" />
+            <option value="$PROJECT_DIR$/kotliontest" />
             <option value="$PROJECT_DIR$/reflectiontest" />
             <option value="$PROJECT_DIR$/viewtest" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
+        <option name="testRunner" value="PLATFORM" />
       </GradleProjectSettings>
     </option>
   </component>
